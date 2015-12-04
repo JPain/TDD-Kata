@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace StringCalculatorTDDKata1
 {
-    class Program
+    class StringCalculator
     {
         static void Main(string[] args)
         {
+        }
+
+        public int Add(string numbers)
+        {
+            throw new NotImplementedException();
         }
     }
 }
