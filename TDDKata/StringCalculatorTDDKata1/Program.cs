@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StringCalculatorTDDKata1
 {
-    class StringCalculator
+    public class StringCalculator
     {
         static void Main(string[] args)
         {
