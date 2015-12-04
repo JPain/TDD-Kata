@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringCalculatorTDDKata1", "StringCalculatorTDDKata1\StringCalculatorTDDKata1.csproj", "{BDDFB810-50B0-487F-B2B6-784650614772}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringCalculatorTDDKata1-Tests", "StringCalculatorTDDKata1-Tests\StringCalculatorTDDKata1-Tests.csproj", "{DD1068DF-43BD-4A96-BA4E-2571FE72E4AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDDFB810-50B0-487F-B2B6-784650614772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDDFB810-50B0-487F-B2B6-784650614772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDDFB810-50B0-487F-B2B6-784650614772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDDFB810-50B0-487F-B2B6-784650614772}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD1068DF-43BD-4A96-BA4E-2571FE72E4AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD1068DF-43BD-4A96-BA4E-2571FE72E4AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD1068DF-43BD-4A96-BA4E-2571FE72E4AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD1068DF-43BD-4A96-BA4E-2571FE72E4AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
