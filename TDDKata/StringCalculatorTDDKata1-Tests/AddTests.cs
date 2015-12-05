@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using StringCalculatorTDDKata1;
 
@@ -97,6 +98,19 @@ namespace StringCalculatorTDDKata1_Tests
         {
             var result = _stringCalculator.Add("134985.1,1385.2");
             Assert.AreEqual(136370, result);
+        }
+
+        [TestMethod]
+        public void Naughty_Strings_Return_0()
+        {
+            foreach (var naughtyString in NaughtyStrings.ListOfStrings)
+            {
+                var result = _stringCalculator.Add(naughtyString);
+                if (result != 0)
+                {
+                    Assert.Fail("Failed input string: " + naughtyString + " Result: " + result);
+                }
+            }
         }
     }
 }
