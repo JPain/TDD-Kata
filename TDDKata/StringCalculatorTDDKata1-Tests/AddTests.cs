@@ -72,10 +72,17 @@ namespace StringCalculatorTDDKata1_Tests
         }
 
         [TestMethod]
-        public void Decimal_Number_Returns_Sum()
+        public void Decimal_Number_Returns_Floored_Sum()
         {
-            var result = _stringCalculator.Add("134985.0");
-            Assert.AreEqual(134985.0, result);
+            var result = _stringCalculator.Add("134985.5");
+            Assert.AreEqual(134985, result);
+        }
+
+        [TestMethod]
+        public void Two_Decimal_Number_Returns_Floored_Sum()
+        {
+            var result = _stringCalculator.Add("134985.1,1385.2");
+            Assert.AreEqual(136370, result);
         }
     }
 }
