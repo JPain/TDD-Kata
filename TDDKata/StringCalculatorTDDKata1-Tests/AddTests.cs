@@ -51,7 +51,7 @@ namespace StringCalculatorTDDKata1_Tests
         }
 
         [TestMethod]
-        public void Two_Space_Seperated_Numbers_Return_0()
+        public void Space_Seperated_Numbers_Return_0()
         {
             var result = _stringCalculator.Add("7 3");
             Assert.AreEqual(result, 0);
