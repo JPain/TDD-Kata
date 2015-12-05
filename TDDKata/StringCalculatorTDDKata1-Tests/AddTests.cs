@@ -63,5 +63,12 @@ namespace StringCalculatorTDDKata1_Tests
             var result = _stringCalculator.Add("+13230");
             Assert.AreEqual(result, 13230);
         }
+
+        [TestMethod]
+        public void Number_With_Negative_Sign_Returns_Negative_Number()
+        {
+            var result = _stringCalculator.Add("-11");
+            Assert.AreEqual(result, -11);
+        }
     }
 }
