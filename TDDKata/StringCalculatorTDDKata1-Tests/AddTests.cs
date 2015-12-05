@@ -137,9 +137,18 @@ namespace StringCalculatorTDDKata1_Tests
         }
 
         [TestMethod]
-        public void Line_Seperated_Numbers_Returns_Sum()
+        public void Line_Seperated_Numbers_With_Environment_NewLine_Returns_Sum()
         {
-            var result = _stringCalculator.Add("5\n4");
+            var queryString = $"5{Environment.NewLine}4";
+            var result = _stringCalculator.Add(queryString);
+            Assert.AreEqual(9, result);
+        }
+
+        [TestMethod]
+        public void Line_Seperated_Numbers_With_Slash_N_Returns_Sum()
+        {
+            var queryString = "5\n4";
+            var result = _stringCalculator.Add(queryString);
             Assert.AreEqual(9, result);
         }
     }
