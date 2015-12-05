@@ -37,6 +37,13 @@ namespace StringCalculatorTDDKata1_Tests
         }
 
         [TestMethod]
+        public void One_Number_String_With_Whitespace_Returns_Sum()
+        {
+            var result = _stringCalculator.Add("  4  ");
+            Assert.AreEqual(4, result);
+        }
+
+        [TestMethod]
         public void Two_Comma_Sepearted_Numbers_Returns_Sum()
         {
             var result = _stringCalculator.Add("2,4");
