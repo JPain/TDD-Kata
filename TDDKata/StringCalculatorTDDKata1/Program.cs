@@ -16,9 +16,9 @@ namespace StringCalculatorTDDKata1
         {
             if (string.IsNullOrWhiteSpace(input))
                 return 0;
-
-            var sNumbers = input.Split(',');
-
+            var stringSeparators = new char[] { ',', '\n'};
+            var sNumbers = input.Split(stringSeparators, StringSplitOptions.RemoveEmptyEntries);
+            
             var result = 0;
 
             foreach (var sNumber in sNumbers)
