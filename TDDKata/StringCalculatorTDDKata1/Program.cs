@@ -24,17 +24,18 @@ namespace StringCalculatorTDDKata1
             foreach (var sNumber in sNumbers)
             {
                 int parsedNumber;
+                decimal parsedDecimal;
                 if (int.TryParse(sNumber, out parsedNumber))
                 {
                     result += parsedNumber;
-                    continue;
                 }
-
-                decimal parsedDecimal;
-                if (decimal.TryParse(sNumber, out parsedDecimal))
+                else if (decimal.TryParse(sNumber, out parsedDecimal))
                 {
                     result += decimal.ToInt32(parsedDecimal);
-                    continue;
+                }
+                else
+                {
+                    return 0;
                 }
             }
 
