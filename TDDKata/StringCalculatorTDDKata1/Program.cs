@@ -22,11 +22,18 @@ namespace StringCalculatorTDDKata1
             var result = 0;
             foreach (var sNum in sNumbers)
             {
-                int theThing;
-                if (!int.TryParse(sNum, out theThing))
-                    return 0;
+                int parsedNumber;
+                if (!int.TryParse(sNum, out parsedNumber))
+                {
+                    decimal parsedDecimal;
+                    if (!decimal.TryParse(sNum, out parsedDecimal))
+                    {
+                        return 0;
+                    }
+                    parsedNumber = decimal.ToInt32(parsedDecimal);
+                }
 
-                result += theThing;
+                result += parsedNumber;
             }
 
             return result;
