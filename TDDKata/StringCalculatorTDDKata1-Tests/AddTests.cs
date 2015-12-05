@@ -159,5 +159,12 @@ namespace StringCalculatorTDDKata1_Tests
             var result = _stringCalculator.Add(queryString);
             Assert.AreEqual(10, result);
         }
+
+        [TestMethod]
+        public void Defined_Delimiters_Returns_Sum()
+        {
+            var result = _stringCalculator.Add("//;\n1;3");
+            Assert.AreEqual(4, result);
+        }
     }
 }
