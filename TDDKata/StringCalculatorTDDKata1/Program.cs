@@ -18,6 +18,8 @@ namespace StringCalculatorTDDKata1
             {
                 return 0;
             }
+
+            return int.Parse(numbers);
             throw new NotImplementedException();
         }
     }
