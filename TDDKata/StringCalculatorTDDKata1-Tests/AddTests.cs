@@ -72,6 +72,13 @@ namespace StringCalculatorTDDKata1_Tests
         }
 
         [TestMethod]
+        public void Two_Negative_Numbers_Returns_Negative_Sum()
+        {
+            var result = _stringCalculator.Add("-11,-2");
+            Assert.AreEqual(-13, result);
+        }
+
+        [TestMethod]
         public void Decimal_Number_Returns_Floored_Sum()
         {
             var result = _stringCalculator.Add("134985.5");
