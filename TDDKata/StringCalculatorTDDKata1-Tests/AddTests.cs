@@ -23,7 +23,7 @@ namespace StringCalculatorTDDKata1_Tests
         }
 
         [TestMethod]
-        public void One_Number_String_Returns_0()
+        public void One_Number_String_Returns_Sum()
         {
             var result = _stringCalculator.Add("4");
             Assert.AreEqual(result, 4);
