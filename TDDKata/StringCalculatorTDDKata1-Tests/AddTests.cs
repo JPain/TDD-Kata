@@ -7,19 +7,21 @@ namespace StringCalculatorTDDKata1_Tests
     [TestClass]
     public class AddTests
     {
-        private StringCalculator StringCalculator;
+        private StringCalculator _stringCalculator;
 
         [TestInitialize]
         public void Setup()
         {
-            StringCalculator = new StringCalculator();
+            _stringCalculator = new StringCalculator();
         }
 
         [TestMethod]
         public void Add_With_Empty_String_Returns_0()
         {
-            var result = StringCalculator.Add("");
+            var result = _stringCalculator.Add("");
             Assert.AreEqual(result, 0);
         }
+
+        
     }
 }
