@@ -18,7 +18,16 @@ namespace StringCalculatorTDDKata1
                 return 0;
 
             var sNumbers = input.Split(',');
-            var result = sNumbers.Select(int.Parse).Sum();
+            int result;
+            try
+            {
+                result = sNumbers.Select(int.Parse).Sum();
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine(e);
+                return 0;
+            }
 
             return result;
         }
