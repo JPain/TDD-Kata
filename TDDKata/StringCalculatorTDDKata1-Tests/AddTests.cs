@@ -28,5 +28,12 @@ namespace StringCalculatorTDDKata1_Tests
             var result = _stringCalculator.Add("4");
             Assert.AreEqual(result, 4);
         }
+
+        [TestMethod]
+        public void Add_With_Two_Comma_Sepearted_Numbers_Returns_Sum()
+        {
+            var result = _stringCalculator.Add("2,4");
+            Assert.AreEqual(result, 6);
+        }
     }
 }
