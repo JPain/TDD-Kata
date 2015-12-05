@@ -53,6 +53,12 @@
     <Compile Include="AddTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StringCalculatorTDDKata1\StringCalculatorTDDKata1.csproj">
+      <Project>{bddfb810-50b0-487f-b2b6-784650614772}</Project>
+      <Name>StringCalculatorTDDKata1</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
