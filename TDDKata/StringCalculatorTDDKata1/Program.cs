@@ -20,20 +20,22 @@ namespace StringCalculatorTDDKata1
             var sNumbers = input.Split(',');
 
             var result = 0;
-            foreach (var sNum in sNumbers)
+
+            foreach (var sNumber in sNumbers)
             {
                 int parsedNumber;
-                if (!int.TryParse(sNum, out parsedNumber))
+                if (int.TryParse(sNumber, out parsedNumber))
                 {
-                    decimal parsedDecimal;
-                    if (!decimal.TryParse(sNum, out parsedDecimal))
-                    {
-                        return 0;
-                    }
-                    parsedNumber = decimal.ToInt32(parsedDecimal);
+                    result += parsedNumber;
+                    continue;
                 }
 
-                result += parsedNumber;
+                decimal parsedDecimal;
+                if (decimal.TryParse(sNumber, out parsedDecimal))
+                {
+                    result += decimal.ToInt32(parsedDecimal);
+                    continue;
+                }
             }
 
             return result;
