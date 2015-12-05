@@ -49,5 +49,12 @@ namespace StringCalculatorTDDKata1_Tests
             var result = _stringCalculator.Add("2,4,6");
             Assert.AreEqual(result, 12);
         }
+
+        [TestMethod]
+        public void Two_Space_Seperated_Numbers_Return_0()
+        {
+            var result = _stringCalculator.Add("7 3");
+            Assert.AreEqual(result, 0);
+        }
     }
 }
