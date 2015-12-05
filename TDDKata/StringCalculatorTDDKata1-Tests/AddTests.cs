@@ -135,5 +135,12 @@ namespace StringCalculatorTDDKata1_Tests
             Assert.AreEqual(expected, result);
 
         }
+
+        [TestMethod]
+        public void Line_Seperated_Numbers_Returns_Sum()
+        {
+            var result = _stringCalculator.Add("5\n4");
+            Assert.AreEqual(9, result);
+        }
     }
 }
