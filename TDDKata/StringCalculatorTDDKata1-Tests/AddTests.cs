@@ -70,5 +70,12 @@ namespace StringCalculatorTDDKata1_Tests
             var result = _stringCalculator.Add("-11");
             Assert.AreEqual(result, -11);
         }
+
+        [TestMethod]
+        public void Decimal_Number_Returns_Sum()
+        {
+            var result = _stringCalculator.Add("134985.0");
+            Assert.AreEqual(result, 134985.0);
+        }
     }
 }
