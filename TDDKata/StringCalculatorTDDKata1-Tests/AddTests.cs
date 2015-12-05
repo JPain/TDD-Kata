@@ -151,5 +151,13 @@ namespace StringCalculatorTDDKata1_Tests
             var result = _stringCalculator.Add(queryString);
             Assert.AreEqual(9, result);
         }
+
+        [TestMethod]
+        public void Line_Seperated_Numbers_With_Slash_N_And_Commas_Returns_Sum()
+        {
+            var queryString = "5,1\n4";
+            var result = _stringCalculator.Add(queryString);
+            Assert.AreEqual(10, result);
+        }
     }
 }
