@@ -112,5 +112,28 @@ namespace StringCalculatorTDDKata1_Tests
                 }
             }
         }
+
+        [TestMethod]
+        public void Large_Amount_Of_Numbers_Returns_Sum()
+        {
+            var queryString = "";
+            var expected = 0;
+            var rnd = new Random();
+            var finishTime = DateTimeOffset.Now.AddSeconds(1);
+
+            while (DateTime.Now < finishTime)
+            {
+                if (queryString != "")
+                    queryString += ",";
+
+                var gen = rnd.Next(-999999999, 999999999);
+                expected += gen;
+                queryString += gen;
+            }
+
+            var result = _stringCalculator.Add(queryString);
+            Assert.AreEqual(expected, result);
+
+        }
     }
 }
