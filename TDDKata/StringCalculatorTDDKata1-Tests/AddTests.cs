@@ -22,6 +22,11 @@ namespace StringCalculatorTDDKata1_Tests
             Assert.AreEqual(result, 0);
         }
 
-        
+        [TestMethod]
+        public void Add_With_One_Number_String_Returns_0()
+        {
+            var result = _stringCalculator.Add("4");
+            Assert.AreEqual(result, 4);
+        }
     }
 }
