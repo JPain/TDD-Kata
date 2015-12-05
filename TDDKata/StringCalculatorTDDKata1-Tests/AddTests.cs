@@ -23,6 +23,13 @@ namespace StringCalculatorTDDKata1_Tests
         }
 
         [TestMethod]
+        public void Numberless_String_Returns_0()
+        {
+            var result = _stringCalculator.Add("This is a String with no numbers");
+            Assert.AreEqual(result, 0);
+        }
+
+        [TestMethod]
         public void One_Number_String_Returns_Sum()
         {
             var result = _stringCalculator.Add("4");
