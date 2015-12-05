@@ -12,15 +12,15 @@ namespace StringCalculatorTDDKata1
         {
         }
 
-        public int Add(string numbers)
+        public int Add(string input)
         {
-            if (string.IsNullOrWhiteSpace(numbers))
-            {
+            if (string.IsNullOrWhiteSpace(input))
                 return 0;
-            }
 
-            return int.Parse(numbers);
-            throw new NotImplementedException();
+            var sNumbers = input.Split(',');
+            var result = sNumbers.Select(int.Parse).Sum();
+
+            return result;
         }
     }
 }
